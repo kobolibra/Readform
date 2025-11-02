@@ -404,7 +404,7 @@ func (a *WebsiteAgent) StartRefreshingRSS() {
 			}
 
 			logger.Infof("[%s] Finished a round of RSS fetch. Sleep 60s.", a.Name())
-			time.Sleep(60 * time.Second)
+			time.Sleep(1 * time.Hour)
 
 			// retry items from retry queue after each RSS refresh
 			select {
